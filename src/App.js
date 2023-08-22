@@ -57,7 +57,7 @@ export default function App() {
         <ul>
           {data.left.map((el, i) => (
             <div key={i} style={{ display: "flex" }}>
-              <input onClick={handleSelect(el)} value={false} type="checkbox" />
+              <input onClick={handleSelect(el)}  value={el} type="checkbox" checked={selected.includes(el)} />
               <li>{el}</li>
             </div>
           ))}
@@ -68,7 +68,7 @@ export default function App() {
         <ul>
           {data.right.map((el, i) => (
             <div key={i} style={{ display: "flex" }}>
-              <input onClick={handleSelect(el)} type="checkbox" />
+              <input onClick={handleSelect(el)} value={el} type="checkbox" />
               <li>{el}</li>
             </div>
           ))}
